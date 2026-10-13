@@ -1,0 +1,45 @@
+# Configuración de GitHub Pages (Jekyll)
+# GitHub Pages renderiza los .md como HTML usando Jekyll.
+
+title: "Curso: Data Center, Cloud, Virtualización y SDN"
+description: >-
+  Curso profesional de 5 sesiones sobre Data Center, virtualización, cloud
+  networking, SDN/NFV y SD-WAN/SASE, con prácticas, diagramas y examen integrador.
+lang: es
+
+# Tema permitido por GitHub Pages.
+theme: jekyll-theme-cayman
+
+# Plugins permitidos por GitHub Pages.
+# - relative-links: reescribe enlaces a .md hacia su página HTML publicada.
+# - optional-front-matter: procesa .md sin front matter.
+# - default-layout: aplica el layout del tema a páginas sin layout.
+# - titles-from-headings: usa el primer H1 como título de la página.
+# - readme-index: usa README.md como índice de su carpeta.
+# - seo-tag y sitemap: metadatos y sitemap del sitio.
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+  - jekyll-readme-index
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Convierte enlaces relativos "foo.md" en "foo.html" al publicar.
+relative_links:
+  enabled: true
+  collections: false
+
+# Toma el H1 como título de la página (sin eliminarlo del contenido).
+titles_from_headings:
+  enabled: true
+  strip_title: false
+  collections: false
+
+# Evita publicar archivos que no corresponden al sitio.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .gitignore

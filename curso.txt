@@ -1,0 +1,98 @@
+curso:DATA CENTER, CLOUD, VIRTUALIZACIÓN Y REDES DEFINIDAS POR SOFTWARE
+Contenido:
+5 sesiones virtuales 20:00-22:00
+SESIÓN 16
+Data Center Profesional: Diseño, Energía, Redundancia y Alta Disponibilidad
+	Arquitectura de Data Center
+	Racks
+	Servidores
+	Storage
+	Networking
+	UPS
+	Generadores
+	Climatización
+	N+1 / 2N
+	Seguridad física
+	Monitoreo ambiental
+	Infraestructura crítica
+	Alta disponibilidad
+	Niveles Tier
+Práctica virtual
+	Diseño conceptual de un Data Center empresarial.
+SESIÓN 17
+Virtualización Profesional con Proxmox y VMware
+	Hypervisores
+	Máquinas virtuales
+	CPU, RAM y almacenamiento
+	Redes virtuales
+	Virtual Switching
+	Snapshots
+	Backups
+	Clústeres
+	Alta disponibilidad
+	Proxmox VE
+	VMware
+	Introducción a contenedores
+	Docker
+Práctica virtual
+	Diseño de un servidor virtualizado para servicios empresariales.
+SESIÓN 18
+Cloud Networking: AWS, Azure y Arquitecturas Híbridas
+	IaaS
+	PaaS
+	SaaS
+	Cloud público/privado/híbrido
+	AWS
+	Microsoft Azure
+	VPC/VNet
+	Subnets
+	Gateways
+	Load Balancers
+	VPN Cloud
+	On-Premise + Cloud
+	Multi-Cloud
+	Seguridad Cloud
+Práctica virtual
+	Diseño de una arquitectura híbrida Cloud + On-Premise.
+SESIÓN 19
+SDN, NFV y Redes Programables
+	Software-Defined Networking
+	Control Plane
+	Data Plane
+	Controladores
+	APIs
+	NFV
+	Funciones virtualizadas
+	Network APIs
+	Automatización
+	Redes programables
+	Infraestructura autónoma
+Práctica virtual
+	Interpretación de una arquitectura SDN/NFV.
+SESIÓN 20
+SD-WAN, SASE y Conectividad Segura para Empresas Multisede
+	WAN tradicional
+	SD-WAN
+	Multi-WAN
+	Selección dinámica de enlaces
+	Políticas
+	Optimización
+	Cloud Connectivity
+	SASE
+	SSE
+	ZTNA
+	Microsegmentación
+	Arquitectura multisede
+Práctica virtual
+	Diseño de una infraestructura multisede moderna.
+
+herramientas sugeridas no limitativas
+Herramientas:
+- Draw io
+- Proxmox
+- VMware 
+- Docker
+- AWS
+- Azure
+- Google cloud
+- Distros Linux deb y rpm

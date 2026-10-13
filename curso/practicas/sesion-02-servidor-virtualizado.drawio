@@ -1,0 +1,121 @@
+<mxfile host="app.diagrams.net" agent="gentle-ai-sdd" version="24.0.0">
+  <diagram id="s2-servidor-virtualizado" name="S2 - Servidor Virtualizado">
+    <mxGraphModel dx="1300" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="s2_title" value="SESIÓN 2 — SERVIDOR VIRTUALIZADO PARA SERVICIOS EMPRESARIALES" style="text;html=1;fontSize=20;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="30" y="15" width="900" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2_fisico" value="CAPA FÍSICA — HOST" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;dashed=1;verticalAlign=top;fontStyle=1;fontSize=12;align=left;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="430" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_cpu" value="CPU: 2 × 16 cores (32 núcleos)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="115" width="390" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_ram" value="RAM: 128 GB ECC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="153" width="390" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_disk" value="Storage: NVMe RAID 10 — 2 TB útiles" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="191" width="390" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2_hyp" value="HYPERVISOR TIPO 1&#10;Proxmox VE (KVM + LXC)  ·  o  ·  VMware ESXi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="430" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2_vms" value="MÁQUINAS VIRTUALES (consolidación de 8 físicos)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;dashed=1;verticalAlign=top;fontStyle=1;fontSize=12;align=left;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="330" width="430" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_vm_dc" value="DC&#10;2 / 6 GB / 80 GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="370" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_vm_file" value="File Server&#10;2 / 4 GB / 500 GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="270" y="370" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_vm_db" value="Base de Datos&#10;4 / 16 GB / 300 GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="430" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_vm_web1" value="Web 1&#10;2 / 4 GB / 60 GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="270" y="430" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_vm_web2" value="Web 2&#10;2 / 4 GB / 60 GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="490" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_vm_erp" value="ERP (crítico)&#10;4 / 12 GB / 200 GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="270" y="490" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_vm_mail" value="Correo&#10;2 / 8 GB / 150 GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="550" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_vm_bkp" value="Backup&#10;2 / 4 GB / 100 GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="270" y="550" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s2_fisico" target="s2_hyp"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s2e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s2_hyp" target="s2_vms"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="s2_net" value="RED VIRTUAL / VIRTUAL SWITCHING" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;dashed=1;verticalAlign=top;fontStyle=1;fontSize=12;align=left;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="510" y="80" width="360" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_vmbr" value="vmbr0 (bridge Linux) / vSwitch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="530" y="120" width="320" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_bond" value="bond0 — LACP 2 × 25 GbE (redundancia)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="530" y="185" width="320" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_vlan10" value="VLAN 10 — Producción" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="530" y="270" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_vlan20" value="VLAN 20 — Datos / DB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="530" y="320" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_vlan30" value="VLAN 30 — Gestión / Backup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="530" y="370" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_vlan40" value="VLAN 40 — Storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="530" y="420" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_snap" value="SNAPSHOT vs BACKUP&#10;Snapshot: revert rápido (mismo storage, no protege ante falla)&#10;Backup: recuperación real — regla 3-2-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="510" y="545" width="360" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="s2e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s2_bond" target="s2_vmbr"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s2e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s2_vmbr" target="s2_vlan10"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s2e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s2_vmbr" target="s2_vlan40"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s2e6" value="vNIC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;" edge="1" parent="1" source="s2_vms" target="s2_vmbr"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="s2_cluster" value="CLÚSTER &amp; ALTA DISPONIBILIDAD (3 nodos)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;dashed=1;verticalAlign=top;fontStyle=1;fontSize=12;align=left;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="910" y="80" width="360" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_nodo1" value="Nodo 1 (Host)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="115" width="320" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_nodo2" value="Nodo 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="160" width="320" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_nodo3" value="Nodo 3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="205" width="320" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_quorum" value="Quorum: Corosync + QDevice (evitar split-brain)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="930" y="248" width="320" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_ceph" value="Ceph — storage compartido&#10;(requisito para HA)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="910" y="320" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_pbs" value="Proxmox Backup Server / Veeam&#10;Backup diario incremental + snapshots" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="910" y="420" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s2e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s2_nodo1" target="s2_ceph"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s2e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s2_nodo2" target="s2_ceph"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s2e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s2_nodo3" target="s2_ceph"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s2e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s2_ceph" target="s2_pbs"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="s2_note" value="Disponibilidad = MTBF / (MTBF + MTTR)  ·  Dimensionar host con 20-30 % de headroom para HA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="655" width="1230" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

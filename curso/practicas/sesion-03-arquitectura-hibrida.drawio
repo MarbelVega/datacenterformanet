@@ -1,0 +1,95 @@
+<mxfile host="app.diagrams.net" agent="gentle-ai-sdd" version="24.0.0">
+  <diagram id="s3-arquitectura-hibrida" name="S3 - Arquitectura Hibrida">
+    <mxGraphModel dx="1300" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="780" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="s3_title" value="SESIÓN 3 — ARQUITECTURA HÍBRIDA CLOUD + ON-PREMISE (RetailSur)" style="text;html=1;fontSize=20;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="30" y="15" width="950" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3_onprem" value="ON-PREMISE (Data Center)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;dashed=1;verticalAlign=top;fontStyle=1;fontSize=13;align=left;spacingLeft=10;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="30" y="80" width="360" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_erp" value="ERP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="55" y="130" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_db" value="Base de Datos&#10;(on-premise)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="215" y="130" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_vpn_onprem" value="VPN Gateway on-prem&#10;(2 túneles IPsec — redundancia)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="55" y="225" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_fw" value="Firewall de borde&#10;(on-prem ↔ cloud)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="55" y="305" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_addr" value="Direccionamiento&#10;on-prem: 10.0.0.0/16&#10;(sin solape con la VPC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="385" width="310" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3_internet" value="Internet&#10;(usuarios e-commerce)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="425" y="120" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_vpn" value="IPsec&#10;Site-to-Site&#10;(2 túneles)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="250" width="160" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3_aws" value="AWS — Región / VPC 10.10.0.0/16" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#d79b00;dashed=1;verticalAlign=top;fontStyle=1;fontSize=13;align=left;spacingLeft=10;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="620" y="80" width="650" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_igw" value="IGW" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="650" y="125" width="120" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_nat" value="NAT Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="800" y="125" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_puba" value="Subred pública A&#10;10.10.1.0/24 (AZ-a)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="190" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_pubb" value="Subred pública B&#10;10.10.2.0/24 (AZ-b)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="860" y="190" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_alb" value="Application Load Balancer&#10;(HTTPS / WAF · 2 AZ)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="700" y="275" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_appa" value="App (privada A)&#10;10.10.11.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="345" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_appb" value="App (privada B)&#10;10.10.12.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="860" y="345" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_dbcloud" value="Base de Datos gestionada (privada)&#10;10.10.21.0/24  ·  Security Group: solo desde App : 5432" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="425" width="400" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_s3" value="S3 backups&#10;(cifrado + versionado)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="505" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_asg" value="Auto Scaling Group&#10;(app-a / app-b)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="860" y="505" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;startArrow=block;startFill=1;" edge="1" parent="1" source="s3_vpn_onprem" target="s3_vpn"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s3e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;startArrow=block;startFill=1;" edge="1" parent="1" source="s3_vpn" target="s3_aws"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s3e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s3_internet" target="s3_igw"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s3e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s3_igw" target="s3_alb"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s3e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s3_alb" target="s3_appa"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s3e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s3_alb" target="s3_appb"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s3e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s3_appa" target="s3_dbcloud"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s3e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s3_appb" target="s3_dbcloud"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s3e9" value="egress" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;" edge="1" parent="1" source="s3_appa" target="s3_nat"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s3e10" value="backup (vía túnel)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;" edge="1" parent="1" source="s3_onprem" target="s3_s3"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="s3_azure" value="Microsoft Azure (multi-cloud) — VNet · NSG · ExpressRoute · Application Gateway · Entra ID" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="30" y="530" width="1240" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_note" value="Seguridad: modelo de responsabilidad compartida · IAM mínimo privilegio + MFA · cifrado en reposo (KMS) y en tránsito · SG/NACL · WAF" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="30" y="605" width="1240" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_tip" value="Nota: subredes públicas → IGW/ALB · subredes privadas → NAT GW para salida · todo en 2 AZ para alta disponibilidad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="30" y="665" width="1240" height="45" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

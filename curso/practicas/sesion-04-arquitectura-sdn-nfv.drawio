@@ -1,0 +1,80 @@
+<mxfile host="app.diagrams.net" agent="gentle-ai-sdd" version="24.0.0">
+  <diagram id="s4-arquitectura-sdn-nfv" name="S4 - Arquitectura SDN NFV">
+    <mxGraphModel dx="1100" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="840" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="s4_title" value="SESIÓN 4 — INTERPRETACIÓN DE UNA ARQUITECTURA SDN / NFV" style="text;html=1;fontSize=20;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="30" y="15" width="900" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s4_app" value="Aplicación de política&#10;(Portal / API)  —  Management Plane" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330" y="70" width="440" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_nb" value="Northbound — REST API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="150" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_ctrl" value="CONTROLADOR SDN  —  Control Plane&#10;ONOS / VMware NSX (clúster)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="210" width="480" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_sba" value="Southbound&#10;NETCONF" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="320" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_sbb" value="Southbound&#10;OpenFlow" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="320" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_swa" value="Switch A&#10;(Data Plane)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="180" y="390" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_swb" value="Switch B&#10;(Data Plane)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="730" y="390" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_under" value="UNDERLAY — red física (spine / leaf, IP)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="470" width="740" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_overlay" value="OVERLAY VXLAN  10.50.0.0/16   —   NFVI (VMs / contenedores)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#82b366;dashed=1;verticalAlign=top;fontStyle=1;fontSize=12;align=center;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="150" y="540" width="800" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_fw" value="VNF&#10;Firewall" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="190" y="590" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_lb" value="VNF&#10;Load Balancer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="460" y="590" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_vpn" value="VNF&#10;VPN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="730" y="590" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_internet" value="Internet / Cloud (VPN)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="350" y="740" width="400" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s4e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s4_app" target="s4_nb"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s4e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s4_nb" target="s4_ctrl"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s4e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s4_ctrl" target="s4_sba"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s4e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s4_ctrl" target="s4_sbb"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s4e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s4_sba" target="s4_swa"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s4e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s4_sbb" target="s4_swb"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s4e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s4_swa" target="s4_overlay"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s4e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s4_swb" target="s4_overlay"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="s4e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" edge="1" parent="1" source="s4_lb" target="s4_internet"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="s4_lgd_t" value="PLANOS Y COMPONENTES" style="text;html=1;fontSize=13;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="985" y="70" width="110" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_l1" value="Management Plane" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="985" y="100" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_l2" value="Control Plane" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="985" y="180" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_l3" value="Data Plane" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="985" y="260" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_l4" value="NFVI (VNF)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="985" y="340" width="100" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

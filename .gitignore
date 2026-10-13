@@ -1,0 +1,19 @@
+# Jekyll (salida de build local)
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Dependencias Ruby
+Gemfile.lock
+vendor/
+.bundle/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores / IDE
+.vscode/
+.idea/
+*.swp
