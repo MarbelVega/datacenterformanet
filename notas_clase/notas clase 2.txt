@@ -1,0 +1,7 @@
+/,/home - XFS, ext4
+/var - LVM
+https://www.citrix.com/downloads/
+https://www.pfsense.org/download/
+https://opnsense.org/
+https://www.nutanix.com/
+https://support.broadcom.com/group/ecx/free-downloads
